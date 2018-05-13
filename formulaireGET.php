@@ -7,7 +7,7 @@
 	echo 'Bonjour ' . $nom . '  -  '.$prenom. '!';
 
 
-	$servername = "localhost";
+	$servername = "localhostlgkhmofgkhmfmklg";
 	$username = "root";
 	$password = "";
 	$dbname = "tuto_php";
