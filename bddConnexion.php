@@ -1,13 +1,11 @@
 <?php
-	
+include 'mesFunctions.php';
 try {
-    $user = "root";
-	$pass = "";
-	$dbh = new PDO('mysql:host=localhost;dbname=tuto_php', $user, $pass);
-
-	$requete = 'SELECT * from user';
-	
-    foreach($dbh->query($requete) as $row) {
+    
+	$dbh = getDatabaseConnexion();
+	$requete = 'SELECT * from utilisateurs';
+	$rows = getAllUsers();
+    foreach($rows as $row) {
         afficherLigne($row);
         //print_r($row);
     }
@@ -17,6 +15,12 @@ try {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
 }
+//createUser('dav','eee','c' ,19, '15 rueddd');
+updateUser(1,'updatedav','eee','c' ,19, '15 rueddd');
+$user = readUser('2');
+//deleteUser('2');
+var_dump($user['nom']);die;
+
 
 function afficherLigne($row) {
 	//print_r( $row['nom']);

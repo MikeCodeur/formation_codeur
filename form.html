@@ -1,18 +1,34 @@
 <html>
+<header>
+	<link rel="stylesheet" href="style.css">
+</header>
 <body>
 
-	<p>
-	    Cette page ne contient que du HTML.<br />
-	    Veuillez taper votre prenom :
-	</p>
+	
 
 	<form action="formulaireGET.php" method="get">
-	<p>
-	    <input type="text" name="name" />
-	    <input type="text" name="prenom" />
-	    <input type="text" name="id" />
-	    <input type="text" name="adresse" />
-	    <input type="submit" value="Valider" />
+	<p>	
+
+		<input type="hidden" name="id" />
+		 <div>
+        	<label for="name">Nom :</label>
+        	<input type="text" id="nom" name="nom" value="toto">
+	    </div>
+	    <div>
+	        <label for="prenom">Prenom</label>
+	        <input type="text" id="prenom" name="prenom">
+	    </div>
+	    <div>
+	        <label for="age">Age:</label>
+	        <input type="text" id="age" name="age">
+	    </div>
+	    <div>
+	        <label for="adresse">adresse :</label>
+	        <textarea id="adresse" name="adresse"></textarea>
+	    </div>
+		<div class="button">
+			<button type="submit">Mettre a jour</button>
+		</div>
 	</p>
 	</form>
 </body>

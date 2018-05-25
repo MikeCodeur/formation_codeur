@@ -1,0 +1,2 @@
+PREFIX=abc;PART=null;FILE=/myprojects/school/out/data/feed_abc_2010120810.gz2
+PREFIX=efg;PART=sdsu;FILE=mail_efg.dat.2010120810.gz2
