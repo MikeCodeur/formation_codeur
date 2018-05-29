@@ -1,0 +1,53 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+
+	
+	<p>
+		<input type="button" onclick="buttonClickGET();" value="Call GET"></input>
+	</p>
+
+	<p id="zone_meteo">
+		
+	</p>
+	
+	
+	<script>
+
+	var callBackGetSuccess = function(data) {
+		console.log("data recu : ",data);
+	  	alert("Meteo temp  : "  + data.main.temp);
+	  	var element = document.getElementById("zone_meteo");
+	  	element.innerHTML  = "La temperature est " + data.main.temp;
+	  	//alert("Sucess : GET de taille : "  + data.length + " last ID "+lastId);
+  	};
+
+  	
+
+	function buttonClickGET() {
+		var url = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=c21a75b667d6f7abb81f118dcf8d4611";
+	
+		//callRestApi : cette fonction est dans le JS fixTripAjaxRestApiUtils-0.0.1.js
+		//callRestApi('GET', null, url, callBackGetSuccess, callBackError,getHttpHeaderJson());
+
+		$.get(url, callBackGetSuccess).done(function() {
+		    //alert( "second success" );
+		  })
+		  .fail(function() {
+		    alert( "error" );
+		  })
+		  .always(function() {
+		    alert( "finished" );
+		  });
+	}
+
+	buttonClickGET();
+
+
+
+	</script>
+</body>
+
