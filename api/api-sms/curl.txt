@@ -1,0 +1,8 @@
+curl 'https://api.twilio.com/2010-04-01/Accounts/AC76ccb6cc98916acb5cd12eea3fefe79a/Messages.json' -X POST \
+--data-urlencode 'To=0033622722615' \
+--data-urlencode 'From=+33644608592' \
+--data-urlencode 'Body=test gros' \
+-u AC76ccb6cc98916acb5cd12eea3fefe79a:71ea8a3055def72c3716ab0c0105f012
+
+
+https://api.twilio.com/2010-04-01/Accounts/AC76ccb6cc98916acb5cd12eea3fefe79a/Messages.json?To%3D0033622722615&From%3D%2B33644608592&Body%3Dtest%20gros
