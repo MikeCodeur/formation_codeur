@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tuto Meteo</title>
+    <meta charset="UTF-8" />
+    <title>Tuto API SMS</title>
+    <link rel="stylesheet" href="app.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="meteo.js"></script>
     <script src="api-sms.js"></script>
   </head>
   <body>
-    <input id="queryLoc" type="text" value="Paris,fr" />
-    <input type="button" value="APPEL API METEO"  onclick="buttonClickGET()"  />
-    <input type="button" value="APPEL API SMS"  onclick="buttonClickSms()"  />
-    <p id="zone_meteo"></p>
+    <div id="app">
+        <input id="messageAenvoyer" type="text" value="Message sms" />
+        <input id="numTelToElement" type="text" value="+336" />
+     <input type="button" value="APPEL API SMS"  onclick="buttonClickSms()"  />
+    </div>
+    <script src="./app.js"></script>
+    <div contenteditable="true">
+        Ce texte peut être édité par l'utilisateur.
+      </div>
 
   </body>
 </html>
